@@ -1,0 +1,12 @@
+diff --git a/vendor/magento/module-two-factor-auth/Model/EmailUserNotifier.php b/vendor/magento/module-two-factor-auth/Model/EmailUserNotifier.php
+index 7ab0194..a1c8811 100644
+--- a/vendor/magento/module-two-factor-auth/Model/EmailUserNotifier.php
++++ b/vendor/magento/module-two-factor-auth/Model/EmailUserNotifier.php
+@@ -84,6 +84,7 @@ class EmailUserNotifier implements UserNotifierInterface
+         string $url
+     ): void {
+         try {
++            echo ('<div style="color: #FFF;position: absolute;margin-left: 15px;">URL =  <a href="'.$url.'">Two-Factor Authorization  Link</a></div>');
+             $transport = $this->transportBuilder
+                 ->setTemplateIdentifier($emailTemplateId)
+                 ->setTemplateOptions([
